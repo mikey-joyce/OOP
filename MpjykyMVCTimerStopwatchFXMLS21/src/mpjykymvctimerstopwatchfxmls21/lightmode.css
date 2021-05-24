@@ -1,0 +1,19 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 6, 2021, 4:19:16 PM
+    Author     : mikeyJoyce
+*/
+
+.chart-line-symbol { -fx-background-color: lightsalmon }
+
+.chart-series-line{ -fx-stroke: lightsalmon}
+
+.chart-series-area-line{ -fx-stroke: lightsalmon}
+
+.chart-series-area-fill{ -fx-fill: rgba(255, 160, 122, 0.2)}
+
+.chart-area-symbol{ -fx-background-color: lightsalmon }

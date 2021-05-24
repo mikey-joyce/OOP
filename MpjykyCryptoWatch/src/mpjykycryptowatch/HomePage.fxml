@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpjykycryptowatch.HomePageController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="300.0">
+         <children>
+            <ComboBox fx:id="cryptoPicker" layoutX="136.0" layoutY="8.0" prefHeight="33.0" prefWidth="150.0" />
+            <Button fx:id="addDelButton" layoutX="136.0" layoutY="50.0" mnemonicParsing="false" onMouseClicked="#addDelCrypto" prefHeight="27.0" prefWidth="150.0" text="Add/Delete">
+               <font>
+                  <Font name="Avenir Black" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="aboutPage" fitHeight="27.0" fitWidth="132.0" layoutY="14.0" onMouseClicked="#goToAbout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="user" layoutX="20.0" layoutY="71.0" onMouseClicked="#loadUser" strokeType="OUTSIDE" strokeWidth="0.0" text="user">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="errorText" fill="#fc0f0f" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="100.0" prefHeight="85.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="crypto1" fitHeight="70.0" fitWidth="70.0" layoutX="31.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noCoin.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="price1" layoutX="161.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font name="Avenir Black" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="name1" layoutX="113.0" layoutY="19.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="185.0" prefHeight="85.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="crypto2" fitHeight="70.0" fitWidth="70.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noCoin.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="price2" layoutX="162.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font name="Avenir Black" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="name2" layoutX="113.0" layoutY="19.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="270.0" prefHeight="85.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="crypto3" fitHeight="70.0" fitWidth="70.0" layoutX="30.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noCoin.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="price3" layoutX="162.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font name="Avenir Black" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="name3" layoutX="113.0" layoutY="19.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="355.0" prefHeight="85.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="crypto4" fitHeight="70.0" fitWidth="70.0" layoutX="32.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noCoin.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="price4" layoutX="165.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font name="Avenir Black" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="name4" layoutX="113.0" layoutY="19.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="440.0" prefHeight="85.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="crypto5" fitHeight="70.0" fitWidth="70.0" layoutX="34.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noCoin.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="price5" layoutX="166.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font name="Avenir Black" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="name5" layoutX="113.0" layoutY="28.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="525.0" prefHeight="85.0" prefWidth="300.0">
+         <children>
+            <ImageView fx:id="crypto6" fitHeight="70.0" fitWidth="70.0" layoutX="35.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@noCoin.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="price6" layoutX="170.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+               <font>
+                  <Font name="Avenir Black" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="name6" layoutX="113.0" layoutY="28.0" opacity="0.4" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

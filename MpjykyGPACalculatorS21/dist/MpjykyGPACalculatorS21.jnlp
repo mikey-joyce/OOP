@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MpjykyGPACalculatorS21.jnlp">
+  <information>
+    <title>MpjykyGPACalculatorS21</title>
+    <vendor>mikeyJoyce</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MpjykyGPACalculatorS21.jar" size="8661" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MpjykyGPACalculatorS21" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mpjykygpacalculators21.MpjykyGPACalculatorS21"  name="MpjykyGPACalculatorS21" />
+  <update check="always"/>
+</jnlp>

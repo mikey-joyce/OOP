@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MpjykyTimerStopwatchS21.jnlp">
+  <information>
+    <title>MpjykyTimerStopwatchS21</title>
+    <vendor>mikeyJoyce</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MpjykyTimerStopwatchS21.jar" size="704628" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MpjykyTimerStopwatchS21" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mpjykytimerstopwatchs21.MpjykyTimerStopwatchS21"  name="MpjykyTimerStopwatchS21" />
+  <update check="always"/>
+</jnlp>

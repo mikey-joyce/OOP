@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpjykycryptowatch.LoginController">
+   <children>
+      <ImageView fitHeight="610.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@loginBackground.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="610.0" prefWidth="300.0">
+         <children>
+            <ImageView fitHeight="66.0" fitWidth="300.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="172.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome!">
+               <font>
+                  <Font name="Avenir Black Oblique" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="loginText" fill="WHITE" layoutX="35.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="Avenir Black" size="25.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usernameTextField" layoutX="35.0" layoutY="324.0" promptText="Username">
+               <font>
+                  <Font name="Avenir Black Oblique" size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordTextField" layoutX="35.0" layoutY="375.0" promptText="Password">
+               <font>
+                  <Font name="Avenir Black Oblique" size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="loginButton" layoutX="35.0" layoutY="457.0" mnemonicParsing="false" onAction="#Login" prefHeight="39.0" prefWidth="238.0" text="Login">
+               <font>
+                  <Font name="Avenir Black" size="18.0" />
+               </font>
+            </Button>
+            <Text fx:id="registerButton" layoutX="97.0" layoutY="521.0" onMouseClicked="#goToRegister" strokeType="OUTSIDE" strokeWidth="0.0" text="Register Account" underline="true">
+               <font>
+                  <Font name="Avenir Black" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="labelStatus" layoutX="35.0" layoutY="442.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="238.0" />
+            <Text layoutX="68.0" layoutY="570.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered By:">
+               <font>
+                  <Font name="Avenir Black Oblique" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="64.0" fitWidth="50.0" layoutX="170.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@coingecko.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

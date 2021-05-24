@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Author: Professor Wergeles -->
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="audioviz.PlayerController">
+   <children>
+      <AnchorPane>
+         <children>
+            <MenuBar prefHeight="29.0" prefWidth="800.0" translateZ="2.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open" />
+                  </items>
+                </Menu>
+                <Menu fx:id="visualizersMenu" mnemonicParsing="false" text="Visualizers" />
+                  <Menu fx:id="bandsMenu" mnemonicParsing="false" text="Bands" />
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass">
+          <stylesheets>
+              <URL value="@player.css" />
+          </stylesheets>
+         <children>
+            <Text id="text-id" fx:id="currentText" fill="LIGHTGRAY" layoutX="400.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="-230.0" translateY="488.0" wrappingWidth="54.0" />
+            <AnchorPane fx:id="vizPane" layoutX="15.0" layoutY="149.0" prefHeight="352.0" prefWidth="771.0" translateZ="-1.0">
+               <children>
+                  <ImageView fx:id="soundOnOff" fitHeight="51.0" fitWidth="57.0" layoutX="714.0" onMouseClicked="#handleMute" pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5" translateY="-10.0">
+                     <image>
+                        <Image url="@MpjykySoundOn.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="baseAudioImage" fitHeight="150.0" fitWidth="200.0" layoutX="286.0" layoutY="77.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" translateZ="2.0" />
+                  <Text id="text-id" fx:id="filePathText" fill="LIGHTGRAY" layoutX="154.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="464.0" />
+               </children>
+            </AnchorPane>
+            <Text fx:id="errorText" fill="RED" layoutX="15.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="42.0" />
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" layoutX="25.0" layoutY="203.0" />
+            <Slider fx:id="timeSlider" layoutX="224.0" layoutY="513.0" onMousePressed="#handleSliderMousePressed" onMouseReleased="#handleSliderMouseReleased" prefHeight="25.0" prefWidth="353.0" />
+            <Slider fx:id="volumeSlider" layoutX="589.0" layoutY="73.0" onMouseReleased="#handleVolumeSliderMouseReleased" rotate="-90.0" translateX="95.0" translateY="-5.0" />
+            <Text id="text-id" fx:id="lengthText" fill="LIGHTGRAY" layoutX="385.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="198.0" translateY="503.0" wrappingWidth="91.0" />
+            <HBox layoutX="281.0" layoutY="549.0" prefHeight="61.0" prefWidth="240.0" spacing="50.0">
+               <children>
+                  <ImageView fx:id="openImage" fitHeight="46.0" fitWidth="51.0" onMouseClicked="#handleOpen" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MpjykyOpen.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="pausePlayImage" fitHeight="46.0" fitWidth="51.0" onMouseClicked="#handlePlayPause" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MpjykyPlay.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="restartImage" fitHeight="50.0" fitWidth="46.0" onMouseClicked="#handleRestart" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MpjykyRestart.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane layoutX="-1.0" prefHeight="215.0" prefWidth="720.0">
+               <children>
+                  <Text id="text-id" fx:id="visualizerNameText" fill="LIGHTGRAY" layoutX="-9.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" textOrigin="TOP" translateX="300.0" translateY="17.0" wrappingWidth="219.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="-41.0" text="Bands:" translateX="55.0" translateY="17.0" />
+                  <Text id="text-id" fx:id="bandsText" fill="LIGHTGRAY" layoutX="-36.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="100.0" translateY="30.0" wrappingWidth="25.5" />
+               </children>
+            </Pane>
+            <Text id="text-id" fx:id="volumePercentage" fill="LIGHTGRAY" layoutX="692.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" translateX="10.0" wrappingWidth="54.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

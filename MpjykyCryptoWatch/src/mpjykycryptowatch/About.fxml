@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpjykycryptowatch.AboutController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="32.0" onMouseClicked="#goToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="139.0" fitWidth="133.0" layoutX="84.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@business.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="106.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mikey Joyce">
+         <font>
+            <Font name="Avenir Black" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="62.0" layoutY="276.0" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" text="I am a sophomore Computer Science student at the University of Missouri. Love trading crypto currency so decided to make a price app." wrappingWidth="175.4912109375">
+         <font>
+            <Font name="Avenir Black" size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="123.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project" wrappingWidth="55.62000274658203">
+         <font>
+            <Font name="Avenir Black" size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="62.0" layoutY="400.0" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" text="This app allows for unique user accounts to have a dashboard of up to 6 cryptocurrencies. You can add cryptos using the combobox and the button in the top  right corner of the screen.  If the user is a returning user, before they can edit the dashboard they must click on the username on the top left of the screen to load their previous dashboard. To go back to the app click on our logo at the top of this screen. Have fun :)" wrappingWidth="175.4912109375">
+         <font>
+            <Font name="Avenir Black" size="10.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

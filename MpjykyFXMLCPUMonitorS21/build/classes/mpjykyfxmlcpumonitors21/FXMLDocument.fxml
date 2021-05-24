@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane fx:id="main" dividerPositions="0.47" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#setUpGraph" prefHeight="531.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpjykyfxmlcpumonitors21.FXMLDocumentController">
+  <items>
+    <AnchorPane fx:id="left" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <StackPane fx:id="gauge" layoutX="20.0" prefHeight="233.0" prefWidth="320.0">
+               <children>
+                  <ImageView id="dialImageView" fx:id="dialImageView" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@gauge.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="handImageView" fitHeight="201.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true" rotate="235.0" scaleX="0.8" scaleY="0.75" translateX="-4.0" translateY="15.0">
+                     <image>
+                        <Image url="@hand.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </StackPane>
+            <HBox fx:id="peakHBox" layoutX="12.0" layoutY="333.0" prefHeight="58.0" prefWidth="328.0">
+               <children>
+                  <Label fx:id="peakLabel" prefHeight="64.0" prefWidth="163.0" text="Peak CPU Usage:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <StackPane fx:id="peakPane" prefHeight="50.0" prefWidth="167.0" />
+               </children>
+            </HBox>
+            <HBox id="meanHBox" fx:id="meanHBox" layoutX="12.0" layoutY="413.0" prefHeight="65.0" prefWidth="344.0">
+               <children>
+                  <Label fx:id="meanLabel" prefHeight="65.0" prefWidth="159.0" text="Mean CPU Usage:">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <StackPane fx:id="meanPane" prefHeight="53.0" prefWidth="171.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="59.0" layoutY="205.0" prefHeight="100.0" prefWidth="251.0">
+               <children>
+                  <Button fx:id="startStopButton" mnemonicParsing="false" onMouseClicked="#startStopButtonAction" text="Start">
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin>
+                  </Button>
+                  <StackPane fx:id="gaugePane" prefHeight="103.0" prefWidth="141.0" />
+                  <Button id="recordButton" fx:id="recordButton" mnemonicParsing="false" onMouseClicked="#recordButtonAction" prefHeight="27.0" prefWidth="62.0" text="Record">
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children></AnchorPane>
+    <AnchorPane fx:id="right" minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="487.0">
+         <children>
+            <LineChart fx:id="recordChart" layoutX="40.0" layoutY="6.0" prefHeight="264.0" prefWidth="344.0" title="Recorded CPU Usage">
+              <xAxis>
+                <CategoryAxis fx:id="recordXAxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="recordYAxis" side="LEFT" />
+              </yAxis>
+               <padding>
+                  <Insets right="-20.0" />
+               </padding>
+            </LineChart>
+            <AreaChart fx:id="cpuLoadChart" layoutX="40.0" layoutY="270.0" prefHeight="245.0" prefWidth="365.0" title="Mean CPU Load">
+              <xAxis>
+                <CategoryAxis fx:id="cpuXAxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="cpuYAxis" side="LEFT" />
+              </yAxis>
+            </AreaChart>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

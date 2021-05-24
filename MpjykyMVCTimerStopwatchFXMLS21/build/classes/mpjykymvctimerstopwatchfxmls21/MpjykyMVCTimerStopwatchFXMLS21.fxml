@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mpjykymvctimerstopwatchfxmls21.MpjykyMVCTimerStopwatchFXMLS21Controller">
+   <children>
+      <StackPane fx:id="gaugePane" prefHeight="314.0" prefWidth="600.0" translateY="30.0">
+         <children>
+            <ImageView fx:id="faceImageView" fitHeight="317.0" fitWidth="314.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@clockface.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="dialImageView" fitHeight="317.0" fitWidth="314.0" pickOnBounds="true" preserveRatio="true" scaleX="0.85" scaleY="0.85">
+               <image>
+                  <Image url="@dial.png" />
+               </image>
+            </ImageView>
+            <StackPane fx:id="togglePane" prefHeight="271.0" prefWidth="466.0" scaleX="0.5" scaleY="0.5" translateX="215.0" translateY="-130.0" />
+         </children>
+      </StackPane>
+      <HBox fx:id="buttonBox" prefHeight="134.0" prefWidth="600.0" translateY="30.0">
+         <children>
+            <Button fx:id="startButton" mnemonicParsing="false" onMouseClicked="#startButtonAction" scaleX="1.5" scaleY="1.5" text="Start" translateX="80.0" translateY="100.0" />
+            <StackPane fx:id="timePane" prefHeight="134.0" prefWidth="320.0" translateX="94.0" />
+            <Button fx:id="recordButton" mnemonicParsing="false" onMouseClicked="#recordButtonAction" scaleX="1.5" scaleY="1.5" text="Record" translateX="105.0" translateY="100.0" />
+         </children>
+      </HBox>
+      <VBox fx:id="dataBox" prefHeight="191.0" prefWidth="600.0" translateY="30.0">
+         <children>
+            <StackPane fx:id="timerCountDownPane" prefHeight="150.0" prefWidth="200.0" />
+            <StackPane fx:id="lapPane" prefHeight="150.0" prefWidth="200.0" />
+            <StackPane fx:id="avgLapPane" prefHeight="150.0" prefWidth="200.0" />
+         </children></VBox>
+      <Pane fx:id="chartPane" prefHeight="241.0" prefWidth="600.0" translateY="20.0">
+         <children>
+            <HBox fx:id="recordBox" prefHeight="241.0" prefWidth="600.0">
+               <children>
+                  <ImageView fx:id="recordArrowImage" fitHeight="43.0" fitWidth="45.0" onMouseClicked="#slide" pickOnBounds="true" preserveRatio="true" rotate="180.0" scaleX="1.3" scaleY="1.3" translateX="20.0" translateY="75.0">
+                     <image>
+                        <Image url="@lightModeArrow.png" />
+                     </image>
+                  </ImageView>
+                  <LineChart fx:id="recordChart" translateX="50.0">
+                    <xAxis>
+                      <CategoryAxis fx:id="recordXAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="recordYAxis" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </HBox>
+            <HBox fx:id="avgBox" prefHeight="241.0" prefWidth="600.0" translateX="600.0">
+               <children>
+                  <AreaChart fx:id="avgChart">
+                    <xAxis>
+                      <CategoryAxis fx:id="avgXAxis" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="avgYAxis" side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+                  <ImageView fx:id="avgArrowImage" fitHeight="43.0" fitWidth="45.0" onMouseClicked="#slide" pickOnBounds="true" preserveRatio="true" scaleX="1.3" scaleY="1.3" translateX="20.0" translateY="75.0">
+                     <image>
+                        <Image url="@lightModeArrow.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>
